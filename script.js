@@ -3,6 +3,8 @@
 //constructor
 function Project() {
   this.projectName = projectName;
-  this.
+  this.dateBegin = dateBegin;
+  this.dateEnd = dateEnd;
   this.projectIMG = projectIMG;
+  this.description = description;
 }
