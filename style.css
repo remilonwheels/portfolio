@@ -1,4 +1,4 @@
-body {
+body * {
   outline: 1px solid red;
 }
 
@@ -10,8 +10,9 @@ html, body, main {
   height: 100%;
 }
 
-main {
-  /*position: relative;*/
+header {
+  height: 75px;
+  position: fixed;
 }
 
 section {
@@ -21,9 +22,10 @@ section {
   top: 75px;
 }
 
-header {
-  height: 75px;
-  position: fixed;
+.section-container {
+  position: relative;
+  top: calc(50% - 75px);
+  transform: translateY(-50%);
 }
 
 nav, ul, li, a {
@@ -62,6 +64,12 @@ a {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .horizontal-center {
   margin: 0 auto;
+}
+
+.left-right-margin {
+  width: 80%;
+  min-width: 150px;
 }
