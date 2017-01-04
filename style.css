@@ -2,6 +2,7 @@ body * {
   outline: 1px solid red;
 }
 
+/*layout*/
 html, body, header, main {
   width: 100%;
 }
@@ -13,6 +14,7 @@ html, body, main {
 header {
   height: 75px;
   position: fixed;
+  z-index: 1;
 }
 
 section {
@@ -20,6 +22,7 @@ section {
   height: calc(100% - 75px);
   position: relative;
   top: 75px;
+  overflow: scroll;
 }
 
 .section-container {
@@ -28,6 +31,7 @@ section {
   transform: translateY(-50%);
 }
 
+/*module-nav*/
 nav, ul, li, a {
   width: 100%;
 }
@@ -57,6 +61,22 @@ a {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/*module-project*/
+article img {
+  width: 100%;
+  max-width: 600px;
+}
+
+article {
+  margin-bottom: 2em;
+}
+
+
+/*General*/
+.template {
+  display: none;
 }
 
 .vertical-align {
