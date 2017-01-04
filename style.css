@@ -1,6 +1,6 @@
-body * {
+/*body * {
   outline: 1px solid red;
-}
+}*/
 
 /*layout*/
 html, body, header, main {
@@ -19,16 +19,15 @@ header {
 
 section {
   /*offset section height by header height*/
-  height: calc(100% - 75px);
+  min-height: calc(100% - 75px);
   position: relative;
   top: 75px;
-  overflow: scroll;
 }
 
 .section-container {
-  position: relative;
-  top: calc(50% - 75px);
-  transform: translateY(-50%);
+  /*position: relative;
+  bottom: calc(50% + 75px);
+  transform: translateY(-50%);*/
 }
 
 /*module-nav*/
@@ -83,6 +82,10 @@ article {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.vertical-align-section {
+  top: calc(50% - 75px);
 }
 
 .horizontal-center {
