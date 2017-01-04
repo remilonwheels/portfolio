@@ -2,34 +2,66 @@ body {
   outline: 1px solid red;
 }
 
-html, body, header, nav, ul, li, a {
+html, body, header, main {
   width: 100%;
 }
 
-html, body, header, nav {
+html, body, main {
   height: 100%;
 }
 
-ul {
-  height: 40%;
+main {
+  /*position: relative;*/
+}
+
+section {
+  /*offset section height by header height*/
+  height: calc(100% - 75px);
+  position: relative;
+  top: 75px;
+}
+
+header {
+  height: 75px;
+  position: fixed;
+}
+
+nav, ul, li, a {
+  width: 100%;
+}
+
+nav, nav div, ul, li {
+  height: 100%;
+}
+
+nav div {
+  width: 75px;
+  font-size: 3em;
+}
+
+i {
+  position: relative;
+  left: 17px;
+  top: 14px;
 }
 
 li {
   display: none;
   text-align: center;
-  height: 25%;
-}
-
-li:first-child {
-  display: block;
-}
-
-li:first-child:hover ~ li {
-  display: block;
+  height: 100%;
 }
 
 a {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.horizontal-center {
+  margin: 0 auto;
 }
