@@ -1,0 +1,35 @@
+body {
+  outline: 1px solid red;
+}
+
+html, body, header, nav, ul, li, a {
+  width: 100%;
+}
+
+html, body, header, nav {
+  height: 100%;
+}
+
+ul {
+  height: 40%;
+}
+
+li {
+  display: none;
+  text-align: center;
+  height: 25%;
+}
+
+li:first-child {
+  display: block;
+}
+
+li:first-child:hover ~ li {
+  display: block;
+}
+
+a {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
