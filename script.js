@@ -32,3 +32,13 @@ new Project('401', '02-19-17', '02-19-17', 'http://lorempixel.com/400/200', 'Lor
 projects.forEach(function(project) {
   $('#projects').append(project.toHTML());
 });
+
+var app = {};
+
+app.navToggle = function() {
+  $('#menu-div').on('click', function() {
+    $('nav li').toggleClass('show');
+  })
+}
+
+app.navToggle();
