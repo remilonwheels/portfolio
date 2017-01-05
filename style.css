@@ -4,21 +4,17 @@
 
 /*base*/
 body * {
-  font-family: 'verdana';
+  font-family: 'verdana', sans-serif;
   font-size: 1em;
   line-height: 1.5;
 }
 
-h1 {
-  font-size: 2em;
-}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
 
-h2 {
-  font-size: 1.5em;
-}
-
-h3 {
-  font-size: 1.25em;
+a {
+  text-decoration: none;
 }
 
 /*layout*/
@@ -72,7 +68,7 @@ i {
 
 ul {
   display: none;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: transparent;
 }
 
 li {
@@ -81,10 +77,20 @@ li {
   background-color: rgba(255, 255, 255, .75);
 }
 
+li:hover {
+  background-color: rgba(0, 0, 0, .75);
+}
+
 a {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 35%;
+  color: black;
+  text-transform: uppercase;
+}
+
+
+li:hover a {
+  color: white;
 }
 
 /*module-project*/
