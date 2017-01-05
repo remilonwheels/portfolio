@@ -13,7 +13,7 @@ function Project(projectName, dateBegin, dateEnd, projectIMG, description, tags)
   projects.push(this);
 }
 
-Project.prototype.toHTML = function() {  
+Project.prototype.toHTML = function() {
   var source = $('project-template').html();
   var templateRender = Handlebars.compile(source);
   return templateRender(this);
@@ -28,20 +28,3 @@ new Project('401', '02-19-17', '02-19-17', 'http://lorempixel.com/400/200', 'Lor
 projects.forEach(function(project) {
   $('#projects').append(project.toHTML());
 });
-
-var app = {};
-
-app.handleNavToggle = function() {
-  $('#menu-div').on('click', function() {
-    $('nav ul').toggleClass('show');
-  })
-}
-
-app.handleNavClick = function() {
-  $('nav li').on('click', function() {
-    $('nav ul').removeClass('show');
-  })
-}
-
-app.handleNavToggle();
-app.handleNavClick();
