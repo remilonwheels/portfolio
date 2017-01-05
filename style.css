@@ -2,6 +2,21 @@
   outline: 1px solid red;
 }*/
 
+/*base*/
+body * {
+  font-family: 'verdana', sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+
+a {
+  text-decoration: none;
+}
+
 /*layout*/
 html, body, header, main {
   width: 100%;
@@ -15,6 +30,7 @@ header {
   height: 75px;
   position: fixed;
   z-index: 1;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 section {
@@ -47,19 +63,36 @@ nav div {
 i {
   position: relative;
   left: 17px;
-  top: 14px;
+  /*top: 5px;*/
+}
+
+ul {
+  display: none;
+  background-color: transparent;
 }
 
 li {
-  display: none;
   text-align: center;
   height: 100%;
+  background-color: rgba(255, 255, 255, .75);
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, .75);
 }
 
 a {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 35%;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 4px;
+}
+
+
+li:hover a {
+  color: white;
 }
 
 /*module-project*/
@@ -95,4 +128,8 @@ article {
 .left-right-margin {
   width: 80%;
   min-width: 150px;
+}
+
+.show {
+  display: block;
 }
