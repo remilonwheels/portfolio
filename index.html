@@ -7,6 +7,15 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://use.fontawesome.com/a045a104f0.js"></script>
     <script src="scripts/jquery-3.1.1.min.js"></script>
+
+    <!-- handlebar templates -->
+    <script id="project-template" type="text/x-handlebars-template">
+      <article>
+        <h3>{{projectName}}</h3>
+        <img src="{{projectIMG}}">
+        <p>{{description}}</p>
+      </article>
+    </script>
   </head>
   <body>
     <header>
@@ -31,11 +40,6 @@
       <div class="section-container">
         <h2>Work</h2>
         <div id="projects">
-          <article class="template">
-            <h3>Title</h3>
-            <img src="http://lorempixel.com/400/200">
-            <p>Description Text</p>
-          </article>
         </div>
       </div>
     </section>
@@ -47,7 +51,7 @@
     </div>
   </section>
     </main>
-
-    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.amd.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

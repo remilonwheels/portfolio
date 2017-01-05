@@ -14,13 +14,16 @@ function Project(projectName, dateBegin, dateEnd, projectIMG, description, tags)
 }
 
 Project.prototype.toHTML = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.find('h3').text(this.projectName);
-  $newProject.find('img').attr('src', this.projectIMG);
-  $newProject.find('p').text(this.description);
-
-  $newProject.removeClass('template');
-  return $newProject;
+  // var $newProject = $('article.template').clone();
+  // $newProject.find('h3').text(this.projectName);
+  // $newProject.find('img').attr('src', this.projectIMG);
+  // $newProject.find('p').text(this.description);
+  //
+  // $newProject.removeClass('template');
+  // return $newProject;
+  var source = $('project-template').html();
+  var templateRender = Handlebars.compile(source);
+  return templateRender(this);
 }
 
 //instances
