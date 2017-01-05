@@ -35,10 +35,17 @@ projects.forEach(function(project) {
 
 var app = {};
 
-app.navToggle = function() {
+app.handleNavToggle = function() {
   $('#menu-div').on('click', function() {
     $('nav ul').toggleClass('show');
   })
 }
 
-app.navToggle();
+app.handleNavClick = function() {
+  $('nav li').on('click', function() {
+    $('nav ul').removeClass('show');
+  })
+}
+
+app.handleNavToggle();
+app.handleNavClick();
