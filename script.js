@@ -37,7 +37,7 @@ var app = {};
 
 app.navToggle = function() {
   $('#menu-div').on('click', function() {
-    $('nav li').toggleClass('show');
+    $('nav ul').toggleClass('show');
   })
 }
 
