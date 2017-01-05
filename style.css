@@ -86,6 +86,8 @@ a {
   top: 35%;
   color: black;
   text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 4px;
 }
 
 
