@@ -1,12 +1,12 @@
 body * {
   font-family: 'verdana', sans-serif;
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.75;
 }
 
-h1 { font-size: 2em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.25em; }
+h1 { font-size: 3em; }
+h2 { font-size: 1em; }
+h3 { font-size: 2em; }
 
 a {
   text-decoration: none;

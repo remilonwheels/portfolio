@@ -14,7 +14,7 @@ function Project(projectName, dateBegin, dateEnd, projectIMG, description, tags)
 }
 
 Project.prototype.toHTML = function() {
-  var source = $('project-template').html();
+  var source = $('#project-template').html();
   var templateRender = Handlebars.compile(source);
   return templateRender(this);
 }
