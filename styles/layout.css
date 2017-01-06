@@ -1,0 +1,27 @@
+html, body, header, main {
+  width: 100%;
+}
+
+html, body, main {
+  height: 100%;
+}
+
+header {
+  height: 75px;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+section {
+  /*offset section height by header height*/
+  min-height: calc(100% - 75px);
+  position: relative;
+  top: 75px;
+}
+
+.section-container {
+  /*position: relative;
+  bottom: calc(50% + 75px);
+  transform: translateY(-50%);*/
+}
