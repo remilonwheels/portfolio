@@ -47,20 +47,26 @@ article {
   margin-bottom: 2em;
 }
 
+.ayo-container {
+  width: 100%;
+}
 .ayo, .ayo2, .ayo3 {
   font-family: 'Bungee Inline', cursive;
-  font-size: 5em;
+  font-size: 22vw;
   line-height: 1;
   display: inline-block;
-  letter-spacing: .5em;
+  letter-spacing: .15em;
 }
 .ayo2 {
-  font-size: 2.5em;
+  font-size: 13.5vw;
 }
 .ayo3 {
   display: block;
 }
 
+.indent1 {
+  padding-left: 2em;
+}
 
 /*General*/
 .template {
