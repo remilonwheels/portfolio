@@ -12,5 +12,15 @@ app.handleNavClick = function() {
   })
 }
 
+app.renderSectionMe = function() {
+  var me =
+    `What
+    up`;
+  console.log(me);
+
+
+}
+
 app.handleNavToggle();
 app.handleNavClick();
+app.renderSectionMe();

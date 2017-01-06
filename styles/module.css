@@ -2,37 +2,30 @@
 nav, ul, li, a {
   width: 100%;
 }
-
 nav, nav div, ul, li {
   height: 100%;
 }
-
 nav div {
   width: 75px;
   font-size: 3em;
 }
-
 i {
   position: relative;
   left: 17px;
   /*top: 5px;*/
 }
-
 ul {
   display: none;
   background-color: transparent;
 }
-
 li {
   text-align: center;
   height: 100%;
   background-color: rgba(255, 255, 255, .75);
 }
-
 li:hover {
   background-color: rgba(0, 0, 0, .75);
 }
-
 a {
   position: relative;
   top: 35%;
@@ -41,8 +34,6 @@ a {
   font-weight: bolder;
   letter-spacing: 4px;
 }
-
-
 li:hover a {
   color: white;
 }
@@ -52,9 +43,22 @@ article img {
   width: 100%;
   max-width: 600px;
 }
-
 article {
   margin-bottom: 2em;
+}
+
+.ayo, .ayo2, .ayo3 {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 5em;
+  line-height: 1;
+  display: inline-block;
+  letter-spacing: .5em;
+}
+.ayo2 {
+  font-size: 2.5em;
+}
+.ayo3 {
+  display: block;
 }
 
 
