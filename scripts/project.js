@@ -2,12 +2,15 @@
 var projects = [];
 
 //constructor
-function Project(projectName, dateBegin, dateEnd, projectIMG, description, tags) {
+function Project(projectName, projectSection, dateBegin, dateEnd, projectIMG, description, ghRepoName, siteLink, tags) {
   this.projectName = projectName;
+  this.projectSection = projectSection;
   this.dateBegin = dateBegin;
   this.dateEnd = dateEnd;
   this.projectIMG = projectIMG;
   this.description = description;
+  this.ghRepoName = ghRepoName;
+  this.siteLink = siteLink;
   this.tags = tags;
 
   projects.push(this);
@@ -20,9 +23,8 @@ Project.prototype.toHTML = function() {
 }
 
 //instances
-new Project('201', '12-19-16', '12-23-16', 'http://lorempixel.com/400/200', 'Lorem ipsum dolor sit amet', ['html', 'css', 'javascript']);
-new Project('301', '01-19-17', '01-23-17', 'http://lorempixel.com/400/200', 'Lorem ipsum dolor sit amet', ['html', 'css', 'javascript', 'jQuery']);
-new Project('401', '02-19-17', '02-19-17', 'http://lorempixel.com/400/200', 'Lorem ipsum dolor sit amet', ['html', 'css', 'javascript']);
+new Project('Salmon Cookies', '201', '12-19-16', '12-23-16', 'http://lorempixel.com/400/200', 'Lorem ipsum dolor sit amet', 'cookie-stand', 'remilonwheels.github.io/cookie-stand', ['html', 'css', 'javascript']);
+new Project('Bus Mall', '201', '12-19-16', '12-23-16', 'http://lorempixel.com/400/200', 'Lorem ipsum dolor sit amet', 'bus-mall', 'remilonwheels.github.io/bus-mall', ['html', 'css', 'javascript']);
 
 //function calls
 projects.forEach(function(project) {
