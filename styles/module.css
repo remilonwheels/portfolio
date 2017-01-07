@@ -6,6 +6,7 @@ nav, nav div, ul, li {
   height: 100%;
 }
 nav div {
+  float: right;
   width: 75px;
   font-size: 3em;
 }
@@ -19,6 +20,7 @@ ul {
   background-color: transparent;
 }
 li {
+  clear: both;
   text-align: center;
   height: 100%;
   background-color: rgba(255, 255, 255, .75);
@@ -56,7 +58,7 @@ article {
   font-size: 22vw;
   line-height: 1;
   display: inline-block;
-  letter-spacing: .15em;
+  letter-spacing: .11em;
 }
 .ayo2 {
   font-size: 13.5vw;
