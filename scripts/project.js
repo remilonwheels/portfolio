@@ -1,5 +1,5 @@
 'use strict';
-var projects = [];
+var projectsRaw = [];
 
 //constructor
 function Project(projectName, projectSection, dateBegin, dateEnd, projectIMG, description, ghRepoName, siteLink, tags) {
@@ -13,7 +13,7 @@ function Project(projectName, projectSection, dateBegin, dateEnd, projectIMG, de
   this.siteLink = siteLink;
   this.tags = tags;
 
-  projects.push(this);
+  projectsRaw.push(this);
 }
 
 Project.prototype.toHTML = function() {
@@ -27,6 +27,6 @@ new Project('Salmon Cookies', '201', '12-19-16', '12-23-16', 'http://lorempixel.
 new Project('Bus Mall', '201', '12-19-16', '12-23-16', 'http://lorempixel.com/400/200', 'Lorem ipsum dolor sit amet', 'bus-mall', 'remilonwheels.github.io/bus-mall', ['html', 'css', 'javascript']);
 
 //function calls
-projects.forEach(function(project) {
+projectsRaw.forEach(function(project) {
   $('#projects').append(project.toHTML());
 });
