@@ -2,31 +2,39 @@
 nav, ul, li, a {
   width: 100%;
 }
-nav, nav div, ul, li {
+nav, ul, li {
   height: 100%;
 }
 nav div {
-  float: right;
+  position: fixed;
+  top: .25em;
+  right: .25em;
   width: 75px;
+  height: 75px;
   font-size: 3em;
+  background-color: rgba(0, 0, 0, .2);
+
+  border-radius: 10px;
+  text-align: center;
 }
 i {
   position: relative;
-  left: 17px;
+  /*left: 17px;*/
   /*top: 5px;*/
+  bottom: .1em;
+
 }
 ul {
   display: none;
   background-color: transparent;
 }
 li {
-  clear: both;
   text-align: center;
   height: 100%;
   background-color: rgba(255, 255, 255, .75);
 }
 li:hover {
-  background-color: rgba(0, 0, 0, .75);
+  background-color: rgba(0, 0, 0, .2);
 }
 a {
   position: relative;
@@ -51,6 +59,13 @@ article {
 }
 
 .ayo-container {
+  position: relative;
+  width: 100%;
+}
+.ayo-container{
+  top: 2em;
+}
+.ayo-container-line{
   width: 100%;
 }
 .ayo, .ayo2, .ayo3 {
