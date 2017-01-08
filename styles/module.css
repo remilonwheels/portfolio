@@ -58,12 +58,12 @@ article {
   margin-bottom: 2em;
 }
 
+.space-div {
+  height: 2em;
+}
 .ayo-container {
   position: relative;
   width: 100%;
-}
-.ayo-container{
-  top: 2em;
 }
 .ayo-container-line{
   width: 100%;
@@ -84,6 +84,16 @@ article {
 
 .indent1 {
   padding-left: 2em;
+}
+
+.home-img {
+  width: 50%;
+  border-radius: 100px;
+}
+.home-img img {
+  width: calc(100% - 1.5em);
+  border-radius: 50%;
+  border: .75em solid rgba(0, 0, 0, .5);
 }
 
 /*General*/
