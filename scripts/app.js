@@ -13,14 +13,18 @@ app.handleNavClick = function() {
 }
 
 app.renderSectionMe = function() {
-  var me =
-    `What
-    up`;
-  console.log(me);
+}
 
+app.populateProjectFilter = function() {
+  for (var i = 0; i < projectsRaw.length; i++){
+    var source = $('#select-project-template').html();
+    var templateRender = Handlebars.compile(source);
+    var newSelect = templateRender(projectsRaw[i]);
+    $('#select-project').append(newSelect);
 
+  }
 }
 
 app.handleNavToggle();
 app.handleNavClick();
-app.renderSectionMe();
+app.populateProjectFilter();
