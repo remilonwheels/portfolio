@@ -82,12 +82,18 @@ li:hover a {
   background-color: rgba(0, 0, 0, .2);
 }
 .project-by-section section {
-  /*overflow-x: auto;*/
-  /*white-space: nowrap;*/
+  overflow-x: auto;
+  white-space: nowrap;
 }
-.project-by-section section h3 {
+.project-by-section  h3 {
   display: inline-block;
-  padding-left: 1em;
+  padding:.25em .5em;
+  border: .125em solid rgba(0, 0, 0, 0.5);
+  
+  border-radius: .5em;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip:    padding;
+  background-clip:         padding-box;
 }
 
 
@@ -102,6 +108,10 @@ li:hover a {
 }
 .project h2 {
   text-align: center;
+}
+
+.projects-container {
+
 }
 
 .space-div {

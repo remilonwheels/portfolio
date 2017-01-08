@@ -16,8 +16,10 @@ app.handleNavClick = function() {
 app.handleProjectClick = function () {
   $('#project-by-section').on('click', 'h3', function() {
     console.log(this);
-    $('.project').hide();
-    $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`).show();
+    $('.project').fadeOut(300);
+    $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
+        .delay(300)
+        .fadeIn(300);
   });
 }
 
