@@ -17,7 +17,7 @@ app.handleProjectClick = function () {
   $('#project-by-section').on('click', 'h3', function() {
     console.log(this);
     $('.project').hide();
-    $(`article[data-project="${$(this).text()}"]`).show();
+    $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`).show();
   });
 }
 
