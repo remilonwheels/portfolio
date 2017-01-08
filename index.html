@@ -14,7 +14,7 @@
 
     <!-- handlebar templates -->
     <script id="project-template" type="text/x-handlebars-template">
-      <article>
+      <article class="project" data-project="{{projectName}}">
         <h2>{{projectName}}</h2>
         <h3>{{projectSection}}</h3>
         <a href="https://github.com/remilonwheels/{{ghRepoName}}">CODE</a>
@@ -78,7 +78,9 @@
       <section id="section-portfolio" class="site-section">
       <div class="section-container">
         <h1>Work</h1>
-        <div id="project-by-section"></div>
+        <div id="project-by-section">
+        <h2>Select Project</h2>
+        </div>
         <!-- handlebar project-template placeholder -->
         <div id="projects"></div>
       </div>

@@ -79,20 +79,22 @@ li:hover a {
 
 .project-by-section header {
   float: left;
+  background-color: rgba(0, 0, 0, .2);
 }
 
-.project-by-section h3 {
+.project-by-section section h3 {
   display: inline-block;
+  padding-left: 1em;
 }
 
 
 /*module-project*/
-article img {
+article.project img {
   width: 100%;
   max-width: 600px;
   display: block;
 }
-article {
+article.project {
   margin-bottom: 2em;
 }
 

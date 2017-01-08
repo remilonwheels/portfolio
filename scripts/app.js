@@ -13,6 +13,14 @@ app.handleNavClick = function() {
   })
 }
 
+app.handleProjectClick = function () {
+  $('#project-by-section').on('click', 'h3', function() {
+    console.log(this);
+    $('.project').hide();
+    $(`article[data-project="${$(this).text()}"]`).show();
+  });
+}
+
 app.renderSectionMe = function() {
 }
 
@@ -53,5 +61,6 @@ app.createProjectSections = function() {
 
 app.handleNavToggle();
 app.handleNavClick();
+app.handleProjectClick();
 // app.populateProjectSelectFilter();
 app.createProjectSections();
