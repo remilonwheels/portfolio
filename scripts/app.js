@@ -16,12 +16,12 @@ app.renderSectionMe = function() {
 }
 
 app.populateProjectSelectFilter = function() {
-  for (var i = 0; i < projectsRaw.length; i++){
+  projectsRaw.forEach(function(project) {
     var source = $('#select-project-template').html();
     var templateRender = Handlebars.compile(source);
-    var newSelect = templateRender(projectsRaw[i]);
+    var newSelect = templateRender(project);
     $('#select-project').append(newSelect);
-  }
+  });
 }
 
 app.createProjectSections = function() {
@@ -35,4 +35,4 @@ app.createProjectSections = function() {
 
 app.handleNavToggle();
 app.handleNavClick();
-// app.populateProjectSelectFilter();
+app.populateProjectSelectFilter();
