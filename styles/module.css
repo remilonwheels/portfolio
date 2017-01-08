@@ -77,6 +77,15 @@ li:hover a {
   }
 }
 
+.project-by-section header {
+  float: left;
+}
+
+.project-by-section h3 {
+  display: inline-block;
+}
+
+
 /*module-project*/
 article img {
   width: 100%;

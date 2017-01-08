@@ -32,8 +32,26 @@ app.createProjectSections = function() {
       sections.push(project.projectSection);
     }
   });
+
+  sections.forEach(function(section) {
+    var projectListBySection = {
+      projectSection:'',
+      projectList: ''
+    };
+    projectListBySection.projectSection = section;
+    projectsRaw.forEach(function(project) {
+      if (project.projectSection === projectListBySection.projectSection) {
+        projectListBySection.projectList += `<h3>${project.projectName}</h3>`;
+      }
+    });
+    var source = $('#project-by-section-template').html();
+    var templateRender = Handlebars.compile(source);
+    var newSection = templateRender(projectListBySection);
+    $('#project-by-section').append(newSection);
+  });
 }
 
 app.handleNavToggle();
 app.handleNavClick();
-app.populateProjectSelectFilter();
+// app.populateProjectSelectFilter();
+app.createProjectSections();
