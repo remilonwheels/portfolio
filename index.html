@@ -14,7 +14,7 @@
 
     <!-- handlebar templates -->
     <script id="project-template" type="text/x-handlebars-template">
-      <article>
+      <article class="project" data-project="{{projectName}}" data-section="{{projectSection}}">
         <h2>{{projectName}}</h2>
         <h3>{{projectSection}}</h3>
         <a href="https://github.com/remilonwheels/{{ghRepoName}}">CODE</a>
@@ -28,11 +28,18 @@
       <option value="{{projectName}}">{{projectSection}}: {{projectName}}</option>
     </script>
 
+    <script id="project-by-section-template" type="text/x-handlebars-template">
+      <article class="project-by-section">
+        <header><h3>{{projectSection}}</h3></header>
+        <section>{{{projectList}}}</section>
+      </article>
+    </script>
+
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <nav class="primary-nav">
-        <div id="menu-div" class=""><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div id="menu-div" class="is-nav-closed"><i class="fa fa-bars" aria-hidden="true"></i></div>
         <ul>
           <li><a href="#section-home">Home</a></li>
           <li><a href="#section-me">Me</a></li>
@@ -43,7 +50,7 @@
     </header>
 
     <main>
-      <section id="section-home">
+      <section id="section-home" class="site-section">
         <div class="section-container">
           <div class='space-div'></div>
           <div class="ayo-container">
@@ -56,7 +63,7 @@
 
         </div>
       </section>
-      <section id="section-me">
+      <section id="section-me" class="site-section">
         <div class="section-container">
           <h1>About Me</h1>
           <div id="me">
@@ -68,19 +75,17 @@
           </div>
         </div>
       </section>
-      <section id="section-portfolio">
+      <section id="section-portfolio" class="site-section">
       <div class="section-container">
         <h1>Work</h1>
+        <div id="project-by-section">
+        <h2>Select Project</h2>
+        </div>
         <!-- handlebar project-template placeholder -->
-        <form id="project-selector">
-          <select id="select-project" name="projects">
-            <option value="">Select Project</option>
-          </select>
-        </form>
         <div id="projects"></div>
       </div>
     </section>
-    <section id="section-contact">
+    <section id="section-contact" class="site-section">
     <div class="section-container">
       <h1>Contact</h1>
       <div><a href="https://github.com/remilonwheels"><i class="fa fa-github-square fa-5x" aria-hidden="true"></i></a></div>
