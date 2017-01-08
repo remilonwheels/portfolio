@@ -2,8 +2,9 @@ var app = {};
 
 app.handleNavToggle = function() {
   $('#menu-div').on('click', function() {
-    $('nav ul').toggleClass('show');
-  })
+    $('nav ul').fadeToggle(500);
+    $(this).toggleClass('is-nav-open is-nav-closed');
+  });
 }
 
 app.handleNavClick = function() {

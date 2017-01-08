@@ -19,10 +19,7 @@ nav div {
 }
 i {
   position: relative;
-  /*left: 17px;*/
-  /*top: 5px;*/
   bottom: .1em;
-
 }
 ul {
   display: none;
@@ -46,6 +43,38 @@ a {
 }
 li:hover a {
   color: white;
+}
+.is-nav-open {
+  background-color: rgba(0, 0, 0, 0);
+  transform: rotate(90deg);
+  animation-name: nav-open;
+  animation-duration: .5s;
+}
+@keyframes nav-open {
+  from {
+    background-color: rgba(0, 0, 0, .2);
+    transform: rotate(0deg);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0);
+    transform: rotate(90deg);
+  }
+}
+.is-nav-closed {
+  background-color: rgba(0, 0, 0, .2);
+  transform: rotate(0deg);
+  animation-name: nav-close;
+  animation-duration: .5s;
+}
+@keyframes nav-close {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    transform: rotate(90deg);
+  }
+  to {
+    background-color: rgba(0, 0, 0, .2);
+    transform: rotate(0deg);
+  }
 }
 
 /*module-project*/
@@ -97,10 +126,6 @@ article {
 }
 
 /*General*/
-.template {
-  display: none;
-}
-
 .vertical-align {
   position: relative;
   top: 50%;
