@@ -15,10 +15,12 @@
     <!-- handlebar templates -->
     <script id="project-template" type="text/x-handlebars-template">
       <article class="project" data-project="{{projectName}}" data-section="{{projectSection}}">
-        <h3>{{projectName}} [{{projectSection}}]:{{titleDescription}}</h3>
-        <a href="https://github.com/remilonwheels/{{ghRepoName}}">CODE</a>
-        <a href="http://{{siteLink}}">WEBSITE</a>
-        <img src="{{projectIMG}}">
+        <h3 class="center-text">{{projectName}} [{{projectSection}}]:{{titleDescription}}</h3>
+        <div class="horizontal-center">
+          <img src="{{projectIMG}}">
+        </div>
+        <div class="project-anchor"><a href="http://{{siteLink}}">WEBSITE</a></div>
+        <div class="project-anchor"><a href="https://github.com/remilonwheels/{{ghRepoName}}">CODE</a></div>
         <p>{{description}}</p>
       </article>
     </script>

@@ -24,10 +24,10 @@ Project.prototype.toHTML = function() {
 }
 
 //instances
-new Project('About Me', '201', '12-19-16', '12-23-16', 'http://lorempixel.com/400/200', 'Week 1 Project', 'Lorem ipsum dolor sit amet', 'about-me', 'remilonwheels.github.io/about-me', ['html', 'css', 'javascript']);
+new Project('About Me', '201', '12-19-16', '12-23-16', 'assets/raw/about-me.png', 'Week 1 Project', 'Lorem ipsum dolor sit amet', 'about-me', 'remilonwheels.github.io/about-me', ['html', 'css', 'javascript']);
 new Project('Salmon Cookies', '201', '12-19-16', '12-23-16', 'assets/raw/cookie-stand.png', 'Week 2 Project', 'Lorem ipsum dolor sit amet', 'cookie-stand', 'remilonwheels.github.io/cookie-stand', ['html', 'css', 'javascript']);
-new Project('Bus Mall', '201', '12-19-16', '12-23-16', 'http://lorempixel.com/400/200', 'Week 3 Project', 'Lorem ipsum dolor sit amet', 'bus-mall', 'remilonwheels.github.io/bus-mall', ['html', 'css', 'javascript']);
-new Project('Find Sam', '201', '12-19-16', '12-23-16', 'http://lorempixel.com/400/200', 'Week 4 Group Project', 'Lorem ipsum dolor sit amet', 'bus-mall', 'remilonwheels.github.io/bus-mall', ['html', 'css', 'javascript']);
+new Project('Bus Mall', '201', '12-19-16', '12-23-16', 'assets/raw/bus-mall.png', 'Week 3 Project', 'Lorem ipsum dolor sit amet', 'bus-mall', 'remilonwheels.github.io/bus-mall', ['html', 'css', 'javascript']);
+new Project('Find Sam', '201', '12-19-16', '12-23-16', 'assets/raw/find-sam.png', 'Week 4 Group Project', 'Lorem ipsum dolor sit amet', 'bus-mall', 'remilonwheels.github.io/bus-mall', ['html', 'css', 'javascript']);
 
 
 //function calls
