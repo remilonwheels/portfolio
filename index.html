@@ -15,11 +15,12 @@
     <!-- handlebar templates -->
     <script id="project-template" type="text/x-handlebars-template">
       <article class="project" data-project="{{projectName}}" data-section="{{projectSection}}">
-        <h2>{{projectName}}</h2>
-        <h3>{{projectSection}}</h3>
-        <a href="https://github.com/remilonwheels/{{ghRepoName}}">CODE</a>
-        <a href="http://{{siteLink}}">WEBSITE</a>
-        <img src="{{projectIMG}}">
+        <h3 class="center-text">{{projectName}} [{{projectSection}}]:{{titleDescription}}</h3>
+        <div class="horizontal-center">
+          <img src="{{projectIMG}}">
+        </div>
+        <div class="project-anchor"><a href="http://{{siteLink}}">WEBSITE</a></div>
+        <div class="project-anchor"><a href="https://github.com/remilonwheels/{{ghRepoName}}">CODE</a></div>
         <p>{{description}}</p>
       </article>
     </script>
@@ -60,6 +61,10 @@
           <div class="home-img horizontal-center">
             <img src="assets/portfolio-crop.png">
           </div>
+          <div class="home-statement">
+            <h2 class="center-text">This is my</h2>
+            <h2 class="center-text">Pursuit of Code</h2>
+          </div>
 
         </div>
       </section>
@@ -79,10 +84,10 @@
       <div class="section-container">
         <h1>Work</h1>
         <div id="project-by-section">
-        <h2>Select Project</h2>
+        <h2 class="center-text bold">Select Project</h2>
         </div>
         <!-- handlebar project-template placeholder -->
-        <div id="projects"></div>
+        <div id="projects" class="projects-container"></div>
       </div>
     </section>
     <section id="section-contact" class="site-section">

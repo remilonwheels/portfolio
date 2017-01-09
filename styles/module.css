@@ -87,9 +87,9 @@ li:hover a {
 }
 .project-by-section  h3 {
   display: inline-block;
-  padding:.25em .5em;
+  padding:.125em .25em;
   border: .125em solid rgba(0, 0, 0, 0.5);
-  
+
   border-radius: .5em;
   -webkit-background-clip: padding-box;
   -moz-background-clip:    padding;
@@ -100,19 +100,30 @@ li:hover a {
 /*module-project*/
 .project img {
   width: 100%;
-  max-width: 600px;
-  display: block;
+  max-width: 960px;
 }
 .project {
+  width: 100%;
   margin-bottom: 2em;
 }
 .project h2 {
   text-align: center;
 }
-
-.projects-container {
-
+.project div {
+  width: 100%;
 }
+.project .project-anchor {
+  width: 49%;
+  display: inline-block;
+  text-align: center;
+}
+.project a {
+  text-align: center;
+}
+.projects-container {
+  width: 100%;
+}
+
 
 .space-div {
   height: 2em;
@@ -151,7 +162,10 @@ li:hover a {
   border-radius: 50%;
   border: .75em solid rgba(0, 0, 0, .5);
 }
-
+.home-statement * {
+  font-family: 'Bungee', 'verdana', sans-serif;
+  font-size: 3em;
+}
 /*General*/
 .vertical-align {
   position: relative;
@@ -167,9 +181,17 @@ li:hover a {
   margin: 0 auto;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .left-right-margin {
   width: 80%;
   min-width: 150px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .show {

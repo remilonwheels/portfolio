@@ -9,7 +9,8 @@ app.handleNavToggle = function() {
 
 app.handleNavClick = function() {
   $('nav li').on('click', function() {
-    $('nav ul').removeClass('show');
+    $('nav ul').fadeOut(500);
+    $('#menu-div').toggleClass('is-nav-open is-nav-closed');
   })
 }
 
