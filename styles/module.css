@@ -89,7 +89,7 @@ li:hover a {
   display: inline-block;
   padding:.25em .5em;
   border: .125em solid rgba(0, 0, 0, 0.5);
-  
+
   border-radius: .5em;
   -webkit-background-clip: padding-box;
   -moz-background-clip:    padding;
@@ -100,7 +100,7 @@ li:hover a {
 /*module-project*/
 .project img {
   width: 100%;
-  max-width: 600px;
+  max-width: 960px;
   display: block;
 }
 .project {
@@ -151,7 +151,10 @@ li:hover a {
   border-radius: 50%;
   border: .75em solid rgba(0, 0, 0, .5);
 }
-
+.home-statement * {
+  font-family: 'Bungee', 'verdana', sans-serif;
+  font-size: 3em;
+}
 /*General*/
 .vertical-align {
   position: relative;
@@ -167,9 +170,17 @@ li:hover a {
   margin: 0 auto;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .left-right-margin {
   width: 80%;
   min-width: 150px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .show {
