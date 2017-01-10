@@ -29,6 +29,8 @@ new Project('Salmon Cookies', '201', '12-19-16', '12-23-16', 'assets/raw/cookie-
 new Project('Bus Mall', '201', '12-19-16', '12-23-16', 'assets/raw/bus-mall.png', 'Week 3 Project', 'Lorem ipsum dolor sit amet', 'bus-mall', 'remilonwheels.github.io/bus-mall', ['html', 'css', 'javascript']);
 new Project('Find Sam', '201', '12-19-16', '12-23-16', 'assets/raw/find-sam.png', 'Week 4 Group Project', 'Lorem ipsum dolor sit amet', 'bus-mall', 'remilonwheels.github.io/bus-mall', ['html', 'css', 'javascript']);
 
+Project.projectsProcessed = [];
+
 
 //function calls
 projectsRaw.forEach(function(project) {
