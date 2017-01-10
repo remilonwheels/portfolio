@@ -21,6 +21,14 @@ Project.loadAll = function(rawProjectData) {
 }
 
 Project.fetchAll = function() {
+  var load = function() {
+    Project.loadAll(JSON.parse(localStorage.projectData));
+    app.loadPage();
+  }
+  var updateData = function(data, msg, xhr) {
+    localStorage.projectData = JSON.stringify(data);
+    localStorage.projectETag = JSON.stringify(xhr.getResponseHeader('ETag'));
+  }
   if ( localStorage.projectData ) {
     let requestETag = '';
     $.ajax( { url: 'data/projects.json', method: 'HEAD' })
@@ -28,20 +36,14 @@ Project.fetchAll = function() {
         requestETag = xhr.getResponseHeader('ETag');
         if ( requestETag !== JSON.parse(localStorage.projectETag) ) {
           console.log('JSON file has changed');
-          $.getJSON('data/projects.json', function(data, msg, xhr) {
-            localStorage.projectData = JSON.stringify(data);
-            localStorage.projectETag = JSON.stringify(xhr.getResponseHeader('ETag'));
-          });
+          $.getJSON('data/projects.json', updateData);
         }
       });
-    Project.loadAll(JSON.parse(localStorage.projectData));
-    app.loadPage();
+    load();
   } else {
     $.getJSON('data/projects.json', function(data, msg, xhr) {
-      localStorage.projectData = JSON.stringify(data);
-      localStorage.projectETag = JSON.stringify(xhr.getResponseHeader('ETag'));
-      Project.loadAll(data);
-      app.loadPage();
+      updateData(data, msg, xhr);
+      load();
     });
   }
 }
