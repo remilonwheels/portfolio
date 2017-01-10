@@ -1,0 +1,50 @@
+[
+  {
+    "projectName":"About Me",
+    "projectSection":"201",
+    "dateBegin":"12-19-16",
+    "dateEnd":"12-23-16",
+    "projectIMG":"assets/raw/about-me.png",
+    "titleDescription":"Week 1 Project",
+    "description":"Lorem ipsum dolor sit amet",
+    "ghRepoName":"about-me",
+    "siteLink":"remilonwheels.github.io/about-me",
+    "tags":["css","javascript"]
+  },
+  {
+    "projectName":"Salmon Cookies",
+    "projectSection":"201",
+    "dateBegin":"12-19-16",
+    "dateEnd":"12-23-16",
+    "projectIMG":"assets/raw/cookie-stand.png",
+    "titleDescription":"Week 2 Project",
+    "description":"Lorem ipsum dolor sit amet",
+    "ghRepoName":"cookie-stand",
+    "siteLink":"remilonwheels.github.io/cookie-stand",
+    "tags":["html","css","javascript"]
+  },
+  {
+    "projectName":"Bus Mall",
+    "projectSection":"201",
+    "dateBegin":"12-19-16",
+    "dateEnd":"12-23-16",
+    "projectIMG":"assets/raw/bus-mall.png",
+    "titleDescription":"Week 3 Project",
+    "description":"Lorem ipsum dolor sit amet",
+    "ghRepoName":"bus-mall",
+    "siteLink":"remilonwheels.github.io/bus-mall",
+    "tags":["html","css","javascript"]
+  },
+  {
+    "projectName":"Find Sam",
+    "projectSection":"201",
+    "dateBegin":"12-19-16",
+    "dateEnd":"12-23-16",
+    "projectIMG":"assets/raw/find-sam.png",
+    "titleDescription":"Week 4 Group Project",
+    "description":"Lorem ipsum dolor sit amet",
+    "ghRepoName":"bus-mall",
+    "siteLink":"remilonwheels.github.io/bus-mall",
+    "tags":["html","css","javascript"]
+  }
+]

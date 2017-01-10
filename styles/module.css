@@ -77,6 +77,9 @@ li:hover a {
   }
 }
 
+.project-by-section {
+  margin-bottom: 2em;
+}
 .project-by-section header {
   float: left;
   background-color: rgba(0, 0, 0, .2);
@@ -97,6 +100,7 @@ li:hover a {
 }
 
 
+
 /*module-project*/
 .project img {
   width: 100%;
@@ -106,10 +110,12 @@ li:hover a {
   width: 100%;
   margin-bottom: 2em;
 }
-.project h2 {
-  text-align: center;
+.project h3 {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 1);
 }
 .project div {
+  max-width: 960px;
   width: 100%;
 }
 .project .project-anchor {
