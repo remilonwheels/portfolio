@@ -62,8 +62,14 @@ app.createProjectSections = function() {
   });
 }
 
-app.handleNavToggle();
-app.handleNavClick();
-app.handleProjectClick();
-// app.populateProjectSelectFilter();
-app.createProjectSections();
+app.loadPage = function() {
+  Project.projectsProcessed.forEach(function(project) {
+    $('#projects').append(project.toHTML());
+  });
+  
+  app.handleNavToggle();
+  app.handleNavClick();
+  app.handleProjectClick();
+  // app.populateProjectSelectFilter();
+  app.createProjectSections();
+}
