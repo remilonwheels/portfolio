@@ -112,9 +112,10 @@ li:hover a {
 }
 .project h3 {
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
 }
 .project div {
+  max-width: 960px;
   width: 100%;
 }
 .project .project-anchor {

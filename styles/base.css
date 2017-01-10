@@ -15,6 +15,15 @@ a {
   text-decoration: none;
 }
 
+button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 1);
+  border-radius: .5em;
+  padding: .25em 1em;
+  border-width: 2px;
+  border-style: none;
+}
+
 html *::-webkit-scrollbar {
     width: 1em;
 }
