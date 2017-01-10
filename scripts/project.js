@@ -29,6 +29,7 @@ Project.fetchAll = function() {
     localStorage.projectData = JSON.stringify(data);
     localStorage.projectETag = JSON.stringify(xhr.getResponseHeader('ETag'));
   }
+  
   if ( localStorage.projectData ) {
     let requestETag = '';
     $.ajax( { url: 'data/projects.json', method: 'HEAD' })
