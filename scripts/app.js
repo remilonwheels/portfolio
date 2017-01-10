@@ -1,27 +1,4 @@
-var app = {};
-
-app.handleNavToggle = function() {
-  $('#menu-div').on('click', function() {
-    $('nav ul').fadeToggle(500);
-    $(this).toggleClass('is-nav-open is-nav-closed');
-  });
-}
-
-app.handleNavClick = function() {
-  $('nav li').on('click', function() {
-    $('nav ul').fadeOut(500);
-    $('#menu-div').toggleClass('is-nav-open is-nav-closed');
-  })
-}
-
-app.handleProjectClick = function () {
-  $('#project-by-section').on('click', 'h3', function() {
-    $('.project').fadeOut(300);
-    $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
-        .delay(300)
-        .fadeIn(300);
-  });
-}
+const app = {};
 
 app.createProjectSections = function() {
   var sections = [];
@@ -49,12 +26,38 @@ app.createProjectSections = function() {
   });
 }
 
+app.handleNavToggle = function() {
+  $('#menu-div').on('click', function() {
+    $('nav ul').fadeToggle(500);
+    $(this).toggleClass('is-nav-open is-nav-closed');
+  });
+}
+
+app.handleNavClick = function() {
+  $('nav li').on('click', function() {
+    $('nav ul').fadeOut(500);
+    $('#menu-div').toggleClass('is-nav-open is-nav-closed');
+  })
+}
+
+app.handleProjectClick = function () {
+  $('#project-by-section').on('click', 'h3', function() {
+    $('.project').fadeOut(300);
+    $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
+        .delay(300)
+        .fadeIn(300);
+  });
+}
+
+
 app.loadPage = function() {
   Project.projectsProcessed.forEach(function(project) {
     $('#projects').append(project.toHTML());
   });
+  app.createProjectSections();
   app.handleNavToggle();
   app.handleNavClick();
   app.handleProjectClick();
-  app.createProjectSections();
 }
+
+$(document).ready(Project.fetchAll);

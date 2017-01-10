@@ -21,12 +21,25 @@ Project.loadAll = function(rawProjectData) {
 }
 
 Project.fetchAll = function() {
-  if (localStorage.projectData) {
+  if ( localStorage.projectData ) {
+    let requestETag = '';
+    $.ajax( { url: 'data/projects.json', method: 'HEAD' })
+      .then(function(data, msg, xhr) {
+        requestETag = xhr.getResponseHeader('ETag');
+        if ( requestETag !== JSON.parse(localStorage.projectETag) ) {
+          console.log('JSON file has changed');
+          $.getJSON('data/projects.json', function(data, msg, xhr) {
+            localStorage.projectData = JSON.stringify(data);
+            localStorage.projectETag = JSON.stringify(xhr.getResponseHeader('ETag'));
+          });
+        }
+      });
     Project.loadAll(JSON.parse(localStorage.projectData));
     app.loadPage();
   } else {
-    $.getJSON('data/projects.json', function(data) {
+    $.getJSON('data/projects.json', function(data, msg, xhr) {
       localStorage.projectData = JSON.stringify(data);
+      localStorage.projectETag = JSON.stringify(xhr.getResponseHeader('ETag'));
       Project.loadAll(data);
       app.loadPage();
     });
