@@ -6,9 +6,9 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/about-me.png",
     "titleDescription":"Week 1 Project",
-    "description":"Lorem ipsum dolor sit amet",
-    "ghRepoName":"about-me",
-    "siteLink":"remilonwheels.github.io/about-me",
+    "description":"Basic HTML/CSS Structure, JS control structures",
+    "ghRepoName":"about_me",
+    "siteLink":"remilonwheels.github.io/about_me",
     "tags":["css","javascript"]
   },
   {
