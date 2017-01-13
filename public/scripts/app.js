@@ -16,7 +16,7 @@ app.createProjectSections = function() {
     projectListBySection.projectSection = section;
     Project.projectsProcessed.forEach(function(project) {
       if (project.projectSection === projectListBySection.projectSection) {
-        projectListBySection.projectList += `<h3>${project.projectName}</h3>`;
+        projectListBySection.projectList += `<div>${project.projectName}</div>`;
       }
     });
     var source = $('#project-by-section-template').html();
@@ -41,7 +41,7 @@ app.handleNavClick = function() {
 }
 
 app.handleProjectClick = function () {
-  $('#project-by-section').on('click', 'h3', function() {
+  $('#project-by-section').on('click', 'div', function() {
     $('.project').fadeOut(300);
     $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
         .delay(300)

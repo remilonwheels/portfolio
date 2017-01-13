@@ -25,13 +25,9 @@
       </article>
     </script>
 
-    <script id="select-project-template" type="text/x-handlebars-template">
-      <option value="{{projectName}}">{{projectSection}}: {{projectName}}</option>
-    </script>
-
     <script id="project-by-section-template" type="text/x-handlebars-template">
       <article class="project-by-section">
-        <header><h3>{{projectSection}}</h3></header>
+        <header><div>{{projectSection}}</h3></header>
         <section>{{{projectList}}}</section>
       </article>
     </script>
@@ -93,8 +89,9 @@
     <section id="section-contact" class="site-section">
     <div class="section-container">
       <h1>Contact</h1>
-      <div><a href="https://github.com/remilonwheels"><i class="fa fa-github-square fa-5x" aria-hidden="true"></i></a></div>
-      <div><a href="https://www.linkedin.com/in/remil-marzan-3827a437"><i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i></a></div>
+      <div class="space-div"></div>
+      <a href="https://github.com/remilonwheels" class="contact-link"><div><i class="fa fa-github-square fa-5x" aria-hidden="true"></i><span class="text-right">Github</span></div></a>
+      <a href="https://www.linkedin.com/in/remil-marzan-3827a437" class="contact-link"><div><i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i><span class="text-right">Linkedin</span></div></a>
     </div>
   </section>
     </main>
