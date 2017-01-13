@@ -49,6 +49,18 @@
   },
   {
     "projectName":"Test Project",
+    "projectSection":"301",
+    "dateBegin":"12-19-16",
+    "dateEnd":"12-23-16",
+    "projectIMG":"assets/raw/find-sam.png",
+    "titleDescription":"Week 4 Group Project",
+    "description":"Lorem ipsum dolor sit amet",
+    "ghRepoName":"find-sam",
+    "siteLink":"remilonwheels.github.io/find-sam",
+    "tags":["html","css","javascript"]
+  },
+  {
+    "projectName":"Test Project 2",
     "projectSection":"Personal",
     "dateBegin":"12-19-16",
     "dateEnd":"12-23-16",
