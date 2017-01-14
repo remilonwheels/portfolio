@@ -1,5 +1,7 @@
 'use strict';
 
+(function(module) {
+
 function Project(opts) {
   for (var key in opts) {
     this[key] = opts[key];
@@ -14,18 +16,16 @@ Project.prototype.toHTML = function() {
 
 Project.projectsProcessed = [];
 
-Project.loadAll = function(rawProjectData) {
-  rawProjectData.forEach(function(project) {
-    Project.projectsProcessed.push(new Project(project));
-  });
-}
+Project.loadAll = rawProjectData =>
+  rawProjectData.forEach( project => Project.projectsProcessed.push(new Project(project)));
 
-Project.fetchAll = function() {
-  var load = function() {
+
+Project.fetchAll = () => {
+  var load = () => {
     Project.loadAll(JSON.parse(localStorage.projectData));
     app.loadPage();
   }
-  var updateData = function(data, msg, xhr) {
+  var updateData = (data, msg, xhr) => {
     localStorage.projectData = JSON.stringify(data);
     localStorage.projectETag = JSON.stringify(xhr.getResponseHeader('ETag'))
     load();
@@ -44,8 +44,10 @@ Project.fetchAll = function() {
         }
       });
   } else {
-    $.getJSON('data/projects.json', function(data, msg, xhr) {
-      updateData(data, msg, xhr);
-    });
+    $.getJSON('data/projects.json', (data, msg, xhr) => updateData(data, msg, xhr));
   }
 }
+
+module.Project = Project;
+
+}(window));
