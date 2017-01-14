@@ -9,8 +9,8 @@
       .reduce( (array, project) => {
         if ( array.indexOf(project.projectSection) === -1 ) {array.push(project.projectSection)} return array;
       }, [])
-      .forEach(function(section) {
-        var projectListBySection =
+      .forEach( section => {
+        let projectListBySection =
           {
             projectSection: section,
             projectList:
@@ -20,10 +20,7 @@
               .reduce( ( a, b ) => a.concat(b) , '')
           };
 
-        var source = $('#project-by-section-template').html();
-        var templateRender = Handlebars.compile(source);
-        var newSection = templateRender(projectListBySection);
-        $('#project-by-section').append(newSection);
+        app.renderTemplate(projectListBySection, '#project-by-section-template', '#project-by-section');
       });
   }
 
@@ -51,13 +48,18 @@
   }
 
   app.loadPage = () => {
-    Project.projectsProcessed.forEach( project => {
-      $('#projects').append(project.toHTML());
-    });
+    Project.projectsProcessed.forEach( project => app.renderTemplate(project, '#project-template', '#projects'));
     app.createProjectSections();
     app.handleNavToggle();
     app.handleNavClick();
     app.handleProjectClick();
+  }
+
+  app.renderTemplate = (item, template, domTarget) => {
+    let source = $(template).html();
+    let templateRender = Handlebars.compile(source);
+    let newItem = templateRender(item);
+    $(domTarget).append(newItem);
   }
 
   module.app = app;
