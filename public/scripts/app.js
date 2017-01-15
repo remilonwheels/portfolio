@@ -38,13 +38,18 @@
   }
 
   app.handleProjectClick = () => {
-    $('#project-by-section').on('click', 'div', function() {
-      $('.project').fadeOut(300);
-      $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
-          .delay(300)
-          .fadeIn(300);
+    $('#project-by-section').on('click', 'section div', function() {
+      // $('.project').fadeOut(300);
+      // $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
+      //     .delay(300)
+      //     .fadeIn(300);
+
       $('#project-by-section div').removeClass('is-project-selected');
       $(this).toggleClass('is-project-selected');
+
+      let projectNameArray = Project.projectsProcessed
+      .map( project => project.projectName );
+      app.projectSlider.goToSlide(projectNameArray.indexOf($(this).text()));
     });
   }
 
@@ -106,18 +111,25 @@
     });
   }
 
+  app.runProjectSlider = () => {
+    return $('#projects').bxSlider();
+  }
+
+  app.projectSlider;
+
   app.loadPage = () => {
     Project.projectsProcessed.forEach( project => app.renderTemplate(project, '#project-template', '#projects'));
     app.createProjectSections();
     app.renderCodeChart();
     app.handleNavToggle();
     app.handleNavClick();
-    // app.handleProjectClick();
+    app.handleProjectClick();
+    app.projectSlider = app.runProjectSlider();
   }
+
 
   module.app = app;
   $(document).ready( function() {
-    // $('.bxslider').bxSlider();
     Project.fetchAll();
   });
 })(window);

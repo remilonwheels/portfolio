@@ -1,7 +1,0 @@
-var data = {};
-
-data.projects = [
-  {
-    
-  }
-];
