@@ -16,7 +16,7 @@
             projectList:
               Project.projectsProcessed
               .filter( project => project.projectSection === section )
-              .map(project => `<div>${project.projectName}</div>`)
+              .map( project => `<div>${project.projectName}</div>`)
               .reduce( ( a, b ) => a.concat(b) , '')
           };
         app.renderTemplate(projectListBySection, '#project-by-section-template', '#project-by-section');
@@ -57,8 +57,10 @@
     let codeScoreArray = Project.projectsProcessed.map( project => project.codeScore);
     let scoreLabelNames = Project.projectsProcessed.map( project => project.projectName);
 
-    var ctx = $('#code-score-chart');
-    var codeScoreChart = new Chart(ctx, {
+    Chart.defaults.global.defaultFontColor = 'rgba(255, 255, 255, 1)';
+
+    let ctx = $('#code-score-chart');
+    let codeScoreChart = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: scoreLabelNames,
@@ -66,22 +68,22 @@
           {
             label: 'HTML',
             data: codeScoreArray.map(scoreArray => scoreArray[0]),
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255,99,132,1)',
+            backgroundColor: 'rgba(15, 60, 150, 0.4)',
+            // borderColor: 'rgba(255, 255, 255, 1)',
             borderWidth: 1
           },
           {
             label: 'CSS',
             data: codeScoreArray.map(scoreArray => scoreArray[1]),
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            borderColor: 'rgba(255,99,132,1)',
+            backgroundColor: 'rgba(15, 60, 150, 0.6)',
+            // borderColor: 'rgba(255, 255, 255, 1)',
             borderWidth: 1
           },
           {
             label: 'JS',
             data: codeScoreArray.map(scoreArray => scoreArray[2]),
-            backgroundColor: 'rgba(255, 99, 132, 0.8)',
-            borderColor: 'rgba(255,99,132,1)',
+            backgroundColor: 'rgba(15, 60, 150, 0.8)',
+            // borderColor: 'rgba(255, 255, 255, 1)',
             borderWidth: 1
           }
         ]
@@ -111,9 +113,6 @@
     app.handleProjectClick();
   }
 
-
   module.app = app;
-
   $(document).ready(Project.fetchAll);
-
 })(window);

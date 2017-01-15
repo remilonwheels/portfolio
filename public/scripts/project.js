@@ -3,7 +3,7 @@
 (function(module) {
 
   function Project(opts) {
-    for (var key in opts) {
+    for (let key in opts) {
       this[key] = opts[key];
     }
   }
@@ -13,13 +13,12 @@
   Project.loadAll = rawProjectData =>
     rawProjectData.forEach( project => Project.projectsProcessed.push(new Project(project)));
 
-
   Project.fetchAll = () => {
-    var load = () => {
+    let load = () => {
       Project.loadAll(JSON.parse(localStorage.projectData));
       app.loadPage();
     }
-    var updateData = (data, msg, xhr) => {
+    let updateData = (data, msg, xhr) => {
       localStorage.projectData = JSON.stringify(data);
       localStorage.projectETag = JSON.stringify(xhr.getResponseHeader('ETag'))
       load();
@@ -43,5 +42,4 @@
   }
 
   module.Project = Project;
-
 }(window));
