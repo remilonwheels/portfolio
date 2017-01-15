@@ -7,7 +7,7 @@
   app.createProjectSections = () => {
     Project.projectsProcessed
       .reduce( (array, project) => {
-        if ( array.indexOf(project.projectSection) === -1 ) {array.push(project.projectSection)} return array;
+        if ( array.indexOf(project.projectSection) === -1 ) { array.push(project.projectSection) } return array;
       }, [])
       .forEach( section => {
         let projectListBySection =
