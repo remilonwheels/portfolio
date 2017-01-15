@@ -38,13 +38,16 @@
   }
 
   app.handleProjectClick = () => {
-    $('#project-by-section').on('click', 'div', function() {
-      $('.project').fadeOut(300);
-      $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
-          .delay(300)
-          .fadeIn(300);
+    $('#project-by-section').on('click', 'section div', function() {
+      // $('.project').fadeOut(300);
+      // $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
+      //     .delay(300)
+      //     .fadeIn(300);
+
       $('#project-by-section div').removeClass('is-project-selected');
       $(this).toggleClass('is-project-selected');
+
+      app.projectSlider.goToSlide($('#project-by-section section div').index(this));
     });
   }
 
@@ -106,6 +109,12 @@
     });
   }
 
+  app.runProjectSlider = () => {
+    return $('#projects').bxSlider();
+  }
+
+  app.projectSlider;
+
   app.loadPage = () => {
     Project.projectsProcessed.forEach( project => app.renderTemplate(project, '#project-template', '#projects'));
     app.createProjectSections();
@@ -113,8 +122,12 @@
     app.handleNavToggle();
     app.handleNavClick();
     app.handleProjectClick();
+    app.projectSlider = app.runProjectSlider();
   }
 
+
   module.app = app;
-  $(document).ready(Project.fetchAll);
+  $(document).ready( function() {
+    Project.fetchAll();
+  });
 })(window);
