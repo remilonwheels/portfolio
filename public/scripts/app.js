@@ -47,9 +47,7 @@
       $('#project-by-section div').removeClass('is-project-selected');
       $(this).toggleClass('is-project-selected');
 
-      let projectNameArray = Project.projectsProcessed
-      .map( project => project.projectName );
-      app.projectSlider.goToSlide(projectNameArray.indexOf($(this).text()));
+      app.projectSlider.goToSlide($('#project-by-section section div').index(this));
     });
   }
 
