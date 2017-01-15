@@ -9,9 +9,11 @@
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
     <link rel="stylesheet" type="text/css" href="styles/module.css">
+    <link rel="stylesheet" type="text/css" href="vendor/styles/jquery.bxslider.css">
     <script src="https://use.fontawesome.com/a045a104f0.js"></script>
     <script src="scripts/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+    <script src="vendor/scripts/jquery.bxslider.min.js"></script>
 
     <!-- handlebar templates -->
     <script id="project-template" type="text/x-handlebars-template">
@@ -75,7 +77,7 @@
             <p class="indent1">//finish l8r</p>
             <p>};</p>
           </div>
-          <canvas id="code-score-chart" width="400" height="400"></canvas>
+          <canvas id="code-score-chart" width="400px" height="400px"></canvas>
         </div>
       </section>
       <section id="section-portfolio" class="site-section">
@@ -85,7 +87,7 @@
         <h2 class="center-text bold">Select Project</h2>
         </div>
         <!-- handlebar project-template placeholder -->
-        <div id="projects" class="projects-container"></div>
+        <div id="projects" class="projects-container bxslider"></div>
       </div>
     </section>
     <section id="section-contact" class="site-section">

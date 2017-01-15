@@ -112,9 +112,12 @@
     app.renderCodeChart();
     app.handleNavToggle();
     app.handleNavClick();
-    app.handleProjectClick();
+    // app.handleProjectClick();
   }
 
   module.app = app;
-  $(document).ready(Project.fetchAll);
+  $(document).ready( function() {
+    // $('.bxslider').bxSlider();
+    Project.fetchAll();
+  });
 })(window);
