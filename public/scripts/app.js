@@ -43,6 +43,8 @@
       $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
           .delay(300)
           .fadeIn(300);
+      $('#project-by-section div').removeClass('is-project-selected');
+      $(this).toggleClass('is-project-selected');
     });
   }
 
@@ -55,7 +57,7 @@
 
   app.renderCodeChart = () => {
     let codeScoreArray = Project.projectsProcessed.map( project => project.codeScore);
-    let scoreLabelNames = Project.projectsProcessed.map( project => project.projectName);
+    let scoreLabelNames = Project.projectsProcessed.map( project => `${project.projectSection}: ${project.titleDescription.slice(0, project.titleDescription.search('Project'))}`);
 
     Chart.defaults.global.defaultFontColor = 'rgba(255, 255, 255, 1)';
 

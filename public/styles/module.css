@@ -102,6 +102,14 @@ canvas {
 .project-by-section header div {
   border-color: rgba(15, 60, 150, .8);
 }
+.is-project-selected {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.is-project-selected header div {
+  background-color: rgba(15, 60, 150, .8);
+}
+
 
 /*module-project*/
 .project img {
