@@ -6,7 +6,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/about-me.png",
     "titleDescription":"Week 1 Project",
-    "description":"Basic HTML/CSS Structure, JS control structures",
+    "description": [["Basic Document Structure"],["Simple CSS Selectors"],["Datatypes","Control Structures"]],
     "ghRepoName":"about_me",
     "siteLink":"remilonwheels.github.io/about_me",
     "codeScore":[1, 1, 1]
@@ -18,7 +18,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/cookie-stand.png",
     "titleDescription":"Week 2 Project",
-    "description":"Lorem ipsum dolor sit amet",
+    "description":[["Forms"], ["Pseudoselectors","Reset"], ["DOM Manipulation","Constructors","Functions"]],
     "ghRepoName":"cookie-stand",
     "siteLink":"remilonwheels.github.io/cookie-stand",
     "codeScore":[2, 2, 2]
@@ -30,7 +30,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/bus-mall.png",
     "titleDescription":"Week 3 Project",
-    "description":"Lorem ipsum dolor sit amet",
+    "description":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
     "ghRepoName":"bus-mall",
     "siteLink":"remilonwheels.github.io/bus-mall",
     "codeScore":[2, 3, 3]
@@ -42,7 +42,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/find-sam.png",
     "titleDescription":"Week 4 Group Project",
-    "description":"Lorem ipsum dolor sit amet",
+    "description":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
     "ghRepoName":"find-sam",
     "siteLink":"remilonwheels.github.io/find-sam",
     "codeScore":[2, 3, 4]
@@ -54,7 +54,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"https://placehold.it/1600x900",
     "titleDescription":"Test Project",
-    "description":"Lorem ipsum dolor sit amet",
+    "description":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
     "ghRepoName":"find-sam",
     "siteLink":"remilonwheels.github.io/find-sam",
     "codeScore":[2, 4, 5]
@@ -66,7 +66,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"https://placehold.it/1600x900",
     "titleDescription":"Test Project",
-    "description":"Lorem ipsum dolor sit amet",
+    "description":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
     "ghRepoName":"find-sam",
     "siteLink":"remilonwheels.github.io/find-sam",
     "codeScore":[2, 4, 6]

@@ -4,8 +4,27 @@
 
   const app = {};
 
+  app.createProjectTemplateObject = project => {
+    let projectTemplateObject = {};
+    for (let key in project) {
+      if ( key ==='description' ) {
+        projectTemplateObject.descHTML =
+          project.description[0]
+            .reduce( (htmlEl, item) => htmlEl.concat(`<p>${item}</p>`) , '');
+        projectTemplateObject.descCSS =
+          project.description[1]
+            .reduce( (htmlEl, item) => htmlEl.concat(`<p>${item}</p>`) , '');
+        projectTemplateObject.descJS =
+          project.description[2]
+            .reduce( (htmlEl, item) => htmlEl.concat(`<p>${item}</p>`) , '');
+      } else {
+        projectTemplateObject[key] = project[key];
+      }
+    }
+    return projectTemplateObject;
+  }
+
   app.createProjectSections = () => {
-    // eslint-disable-next-line Project not defined
     Project.projectsProcessed
       .reduce( (array, project) => {
         if ( array.indexOf(project.projectSection) === -1 ) { array.push(project.projectSection) } return array;
@@ -117,7 +136,7 @@
   app.projectSlider;
 
   app.loadPage = () => {
-    Project.projectsProcessed.forEach( project => app.renderTemplate(project, '#project-template', '#projects')); // eslint-disable-line no-use-before-define
+    Project.projectsProcessed.forEach( project => app.renderTemplate(app.createProjectTemplateObject(project), '#project-template', '#projects')); // eslint-disable-line no-use-before-define
     app.createProjectSections();
     app.renderCodeChart();
     app.handleNavToggle();
