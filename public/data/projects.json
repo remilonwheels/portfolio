@@ -6,7 +6,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/about-me.png",
     "titleDescription":"Week 1 Project",
-    "description": [["Basic Document Structure"],["Simple CSS Selectors"],["Datatypes","Control Structures"]],
+    "description": [["documentStructure"],["selectors"],["datatypes","controlStructures"]],
     "ghRepoName":"about_me",
     "siteLink":"remilonwheels.github.io/about_me",
     "codeScore":[1, 1, 1]
@@ -18,7 +18,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/cookie-stand.png",
     "titleDescription":"Week 2 Project",
-    "description":[["Forms"], ["Pseudoselectors","Reset"], ["DOM Manipulation","Constructors","Functions"]],
+    "description":[["forms"], ["pseudoselectors","reset"], ["DOManipulation","constructors","functions"]],
     "ghRepoName":"cookie-stand",
     "siteLink":"remilonwheels.github.io/cookie-stand",
     "codeScore":[2, 2, 2]

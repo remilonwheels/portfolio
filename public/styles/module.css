@@ -134,13 +134,35 @@ canvas {
   width: 49%;
   display: inline-block;
   text-align: center;
+  margin: 1em 0;
 }
 .project a {
   text-align: center;
 }
+.project-description p {
+  float: left;
+}
+.project-description .description-title {
+  clear: left;
+}
+.project-description .description-title::after {
+  content: ':'
+}
+/*.project-description p:not(.description-title) {
+  border-right: 2px solid rgba(0, 0, 0, 1);
+  padding: 0 .4em;
+}
+.project-description p:not(.description-title):last-child {
+  border-style: none;
+}*/
+.project-description p:not(.description-title):before {
+  content: '#';
+  padding-left: .5em;
+}
 .projects-container {
   width: 100%;
 }
+
 
 
 .space-div {
