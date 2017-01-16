@@ -5,6 +5,7 @@
   const app = {};
 
   app.createProjectSections = () => {
+    // eslint-disable-next-line Project not defined
     Project.projectsProcessed
       .reduce( (array, project) => {
         if ( array.indexOf(project.projectSection) === -1 ) { array.push(project.projectSection) } return array;
@@ -73,14 +74,14 @@
           {
             label: 'HTML',
             data: codeScoreArray.map(scoreArray => scoreArray[0]),
-            backgroundColor: 'rgba(15, 60, 150, 0.4)',
+            backgroundColor: 'rgba(255, 255, 255, 1)',
             // borderColor: 'rgba(255, 255, 255, 1)',
             borderWidth: 1
           },
           {
             label: 'CSS',
             data: codeScoreArray.map(scoreArray => scoreArray[1]),
-            backgroundColor: 'rgba(15, 60, 150, 0.6)',
+            backgroundColor: 'rgba(255, 255, 255, .5)',
             // borderColor: 'rgba(255, 255, 255, 1)',
             borderWidth: 1
           },
@@ -92,20 +93,20 @@
             borderWidth: 1
           }
         ]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero:true
-              },
-              stacked: true
-            }],
-            xAxes: [{
-              stacked: true
-            }]
-          }
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero:true
+            },
+            // stacked: true
+          }],
+          xAxes: [{
+            // stacked: true
+          }]
         }
+      }
     });
   }
 
@@ -116,7 +117,7 @@
   app.projectSlider;
 
   app.loadPage = () => {
-    Project.projectsProcessed.forEach( project => app.renderTemplate(project, '#project-template', '#projects'));
+    Project.projectsProcessed.forEach( project => app.renderTemplate(project, '#project-template', '#projects')); // eslint-disable-line no-use-before-define
     app.createProjectSections();
     app.renderCodeChart();
     app.handleNavToggle();
