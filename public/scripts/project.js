@@ -33,7 +33,7 @@
             console.log('JSON file has changed');
             $.getJSON('data/projects.json', updateData);
           } else {
-            load();            
+            load();
           }
         });
     } else {

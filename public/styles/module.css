@@ -1,11 +1,11 @@
 /*module-nav*/
-nav, ul, li, a {
+.primary-nav, .primary-nav ul, .primary-nav li, .primary-nav a {
   width: 100%;
 }
-nav, ul, li {
+.primary-nav, .primary-nav ul, .primary-nav li {
   height: 100%;
 }
-nav div {
+.primary-nav div {
   position: fixed;
   top: .25em;
   right: .25em;
@@ -20,19 +20,19 @@ nav div {
   position: relative;
   bottom: .1em;
 }
-ul {
+.primary-nav ul {
   display: none;
   background-color: transparent;
 }
-li {
+.primary-nav li {
   text-align: center;
   height: 100%;
   background-color: rgba(255, 255, 255, .85);
 }
-li:hover {
+.primary-nav li:hover {
   background-color: rgba(15, 60, 150, .5);
 }
-a {
+.primary-nav a {
   position: relative;
   top: 35%;
   color: black;
@@ -40,10 +40,10 @@ a {
   font-weight: bolder;
   letter-spacing: 4px;
 }
-li:hover a {
+.primary-nav li:hover a {
   color: white;
 }
-.is-nav-open {
+.primary-nav .is-nav-open {
   background-color: rgba(15, 60, 150, 0);
   transform: rotate(90deg);
   animation-name: nav-open;
@@ -59,7 +59,7 @@ li:hover a {
     transform: rotate(90deg);
   }
 }
-.is-nav-closed {
+.primary-nav .is-nav-closed {
   background-color: rgba(15, 60, 150, .4);
   transform: rotate(0deg);
   animation-name: nav-close;
@@ -146,7 +146,7 @@ canvas {
   clear: left;
 }
 .project-description .description-title::after {
-  content: ':'
+  content: ''
 }
 /*.project-description p:not(.description-title) {
   border-right: 2px solid rgba(0, 0, 0, 1);
@@ -219,7 +219,7 @@ canvas {
   color: rgba(15, 60, 150 , .8);
 }
 
-/*General*/
+/*Helper*/
 .vertical-align {
   position: relative;
   top: 50%;

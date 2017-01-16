@@ -142,8 +142,6 @@
     });
   }
 
-  app.projectSlider;
-
   app.loadPage = () => {
     Project.projectsProcessed.forEach( project => app.renderTemplate(app.createProjectTemplateObject(project), '#project-template', '#projects')); // eslint-disable-line no-use-before-define
     app.createProjectSections();
@@ -154,9 +152,13 @@
     app.projectSlider = app.runProjectSlider();
   }
 
-
   module.app = app;
+
   $(document).ready( () => {
+    $('body *').css('visibility', 'hidden');
     Project.fetchAll();
+    window.onload = () => {
+      $('body *').css('visibility', 'initial');
+    }
   });
 })(window);
