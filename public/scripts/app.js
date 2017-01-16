@@ -130,7 +130,16 @@
   }
 
   app.runProjectSlider = () => {
-    return $('#projects').bxSlider();
+    return $('#projects').bxSlider( {
+      onSlideBefore: (slideElement, oldIndex, newIndex) => {
+        $('#project-by-section div').removeClass('is-project-selected');
+        $($('#project-by-section section div')[app.projectSlider.getCurrentSlide()]).toggleClass('is-project-selected');
+      },
+      onSliderLoad: currentIndex => {
+        $('#project-by-section div').removeClass('is-project-selected');
+        $($('#project-by-section section div')[app.projectSlider.getCurrentSlide()]).toggleClass('is-project-selected');
+      }
+    });
   }
 
   app.projectSlider;
@@ -147,7 +156,7 @@
 
 
   module.app = app;
-  $(document).ready( function() {
+  $(document).ready( () => {
     Project.fetchAll();
   });
 })(window);

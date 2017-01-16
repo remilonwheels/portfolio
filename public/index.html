@@ -2,8 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>AYO.imRemil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AYO.imRemil</title>
+
+    <!-- resources -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Hairline|Bungee+Inline|Bungee+Outline|Bungee+Shade" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="vendor/styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
@@ -15,7 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
     <script src="vendor/lib/bxSlider/jquery.bxslider.min.js"></script>
 
-    <!-- handlebar templates -->
+    <!-- handlebar project template -->
     <script id="project-template" type="text/x-handlebars-template">
       <article class="project" data-project="{{projectName}}" data-section="{{projectSection}}">
         <h3 class="center-text">{{projectName}} [{{projectSection}}]:{{titleDescription}}</h3>
@@ -32,14 +34,15 @@
       </article>
     </script>
 
+    <!-- handlebar section template -->
     <script id="project-by-section-template" type="text/x-handlebars-template">
       <article class="project-by-section">
         <header><div>{{projectSection}}</h3></header>
         <section>{{{projectList}}}</section>
       </article>
     </script>
-
   </head>
+
   <body>
     <header class="site-header">
       <nav class="primary-nav">
