@@ -155,10 +155,10 @@
   module.app = app;
 
   $(document).ready( () => {
-    $('body *').css('visibility', 'hidden');
+    // $('body *').css('visibility', 'hidden');
     Project.fetchAll();
-    window.onload = () => {
-      $('body *').css('visibility', 'initial');
-    }
+    // window.onload = () => {
+    //   $('body *').css('visibility', 'initial');
+    // }
   });
 })(window);
