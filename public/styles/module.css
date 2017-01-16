@@ -76,13 +76,52 @@
   }
 }
 
+.code-item {
+  width: 100%;
+  height: 25%;
+  margin-top: 1em;
+}
+.code-item ul {
+  height: 100%;
+}
+.code-item li {
+  position: relative;
+  height: 75px;
+  color: rgba(255, 255, 255, 1);
+}
+.code-item li div {
+}
+.code-item li > div:nth-of-type(2) {
+  text-align: center;
+  line-height: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 35%;
+}
+.code-item li > div:nth-child(2) div {
+  height: 50%;
+}
+.code-item li.vt {
+  background: -webkit-radial-gradient(circle, #d8630f, #4c0202);
+}
+.code-item h3 {
+  background-color: rgba(15, 60, 150, .8);
+  text-align: right;
+  color: rgba(255, 255, 255, 1);
+}
+.code-item h3 span {
+  /*color: rgba(15, 60, 150, .7);*/
+}
+
 canvas {
   background-color: rgba(0, 0, 0, 1);
   width: 100%;
   height: 100%:
 }
 
-.project-by-section h2{
+.project-by-section h2 {
   color: rgba(15, 60, 150, 1);
 }
 .project-by-section:last-child {
@@ -219,7 +258,17 @@ canvas {
   color: rgba(15, 60, 150 , .8);
 }
 
-/*Helper*/
+/*Helpers*/
+.img-background {
+  background-color: rgba(255, 255, 255, 0);
+}
+.img-background img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+
 .vertical-align {
   position: relative;
   top: 50%;
