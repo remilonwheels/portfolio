@@ -7,15 +7,15 @@
   app.createProjectTemplateObject = project => {
     let projectTemplateObject = {};
     for (let key in project) {
-      if ( key ==='description' ) {
-        projectTemplateObject.descHTML =
-          project.description[0]
+      if ( key ==='tags' ) {
+        projectTemplateObject.tagHTML =
+          project.tags[0]
             .reduce( (htmlEl, item) => htmlEl.concat(`<p>${item}</p>`) , '');
-        projectTemplateObject.descCSS =
-          project.description[1]
+        projectTemplateObject.tagCSS =
+          project.tags[1]
             .reduce( (htmlEl, item) => htmlEl.concat(`<p>${item}</p>`) , '');
-        projectTemplateObject.descJS =
-          project.description[2]
+        projectTemplateObject.tagJS =
+          project.tags[2]
             .reduce( (htmlEl, item) => htmlEl.concat(`<p>${item}</p>`) , '');
       } else {
         projectTemplateObject[key] = project[key];

@@ -6,7 +6,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/about-me.png",
     "titleDescription":"Week 1 Project",
-    "description": [["documentStructure"],["selectors"],["datatypes","controlStructures"]],
+    "tags": [["documentStructure"],["selectors"],["datatypes","controlStructures"]],
     "ghRepoName":"about_me",
     "siteLink":"remilonwheels.github.io/about_me",
     "codeScore":[1, 1, 1]
@@ -18,7 +18,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/cookie-stand.png",
     "titleDescription":"Week 2 Project",
-    "description":[["forms"], ["pseudoselectors","reset"], ["DOManipulation","constructors","functions"]],
+    "tags":[["forms"], ["pseudoselectors","reset"], ["DOManipulation","constructors","functions"]],
     "ghRepoName":"cookie-stand",
     "siteLink":"remilonwheels.github.io/cookie-stand",
     "codeScore":[2, 2, 2]
@@ -30,7 +30,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/bus-mall.png",
     "titleDescription":"Week 3 Project",
-    "description":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
+    "tags":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
     "ghRepoName":"bus-mall",
     "siteLink":"remilonwheels.github.io/bus-mall",
     "codeScore":[2, 3, 3]
@@ -42,7 +42,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"assets/raw/find-sam.png",
     "titleDescription":"Week 4 Group Project",
-    "description":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
+    "tags":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
     "ghRepoName":"find-sam",
     "siteLink":"remilonwheels.github.io/find-sam",
     "codeScore":[2, 3, 4]
@@ -54,7 +54,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"https://placehold.it/1600x900",
     "titleDescription":"Test Project",
-    "description":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
+    "tags":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
     "ghRepoName":"find-sam",
     "siteLink":"remilonwheels.github.io/find-sam",
     "codeScore":[2, 4, 5]
@@ -66,7 +66,7 @@
     "dateEnd":"12-23-16",
     "projectIMG":"https://placehold.it/1600x900",
     "titleDescription":"Test Project",
-    "description":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
+    "tags":[["Define HTML Structure"], ["Simple CSS Selectors"], ["JS Control Structures"]],
     "ghRepoName":"find-sam",
     "siteLink":"remilonwheels.github.io/find-sam",
     "codeScore":[2, 4, 6]
