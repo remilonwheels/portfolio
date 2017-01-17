@@ -24,10 +24,6 @@ button {
   border-style: none;
 }
 
-img {
-  max-width: 100%;
-}
-
 html *::-webkit-scrollbar {
     width: 1em;
 }

@@ -2,20 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>AYO.imRemil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AYO.imRemil</title>
+
+    <!-- resources -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Hairline|Bungee+Inline|Bungee+Outline|Bungee+Shade" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="vendor/styles/reset.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
     <link rel="stylesheet" type="text/css" href="styles/module.css">
-    <link rel="stylesheet" type="text/css" href="vendor/styles/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="vendor/lib/bxSlider/jquery.bxslider.css">
     <script src="https://use.fontawesome.com/a045a104f0.js"></script>
-    <script src="vendor/scripts/jquery-3.1.1.min.js"></script>
+    <script src="vendor/lib/jQuery/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
-    <script src="vendor/scripts/jquery.bxslider.min.js"></script>
+    <script src="vendor/lib/bxSlider/jquery.bxslider.min.js"></script>
 
-    <!-- handlebar templates -->
+    <!-- handlebar project template -->
     <script id="project-template" type="text/x-handlebars-template">
       <article class="project" data-project="{{projectName}}" data-section="{{projectSection}}">
         <h3 class="center-text">{{projectName}} [{{projectSection}}]:{{titleDescription}}</h3>
@@ -24,18 +27,23 @@
         </div>
         <div class="project-anchor"><a target="_blank" href="http://{{siteLink}}"><button>WEBSITE</button></a></div>
         <div class="project-anchor"><a target="_blank" href="https://github.com/remilonwheels/{{ghRepoName}}"><button>CODE</button></a></div>
-        <p>{{description}}</p>
+        <div class="project-description">
+          <div><p class="description-title bold">html</p>{{{tagHTML}}}</div>
+          <div><p class="description-title bold">css</p>{{{tagCSS}}}</div>
+          <div><p class="description-title bold">js</p>{{{tagJS}}}</div>
+        </div>
       </article>
     </script>
 
+    <!-- handlebar section template -->
     <script id="project-by-section-template" type="text/x-handlebars-template">
       <article class="project-by-section">
         <header><div>{{projectSection}}</h3></header>
         <section>{{{projectList}}}</section>
       </article>
     </script>
-
   </head>
+
   <body>
     <header class="site-header">
       <nav class="primary-nav">
@@ -52,7 +60,7 @@
     <main>
       <section id="section-home" class="site-section">
         <div class="section-container">
-          <div class='space-div'></div>
+          <div class="space-div"></div>
           <div class="ayo-container center-text">
             <div class="ayo-container-line"><div class="ayo">AYO</div><div class="ayo2">.IM</div></div>
             <div class="ayo3 ayo-container-line">REMIL</div>
@@ -67,17 +75,53 @@
 
         </div>
       </section>
-      <section id="section-me" class="site-section">
+      <section id="section-code" class="site-section">
         <div class="section-container">
-          <h1>About Me</h1>
-          <div id="me">
-            <p>var remi = {</p>
-            <p class="indent1">fullName: 'Remil Marzan',</p>
-            <p class="indent1">faveFood: ['pizza', 'chicken adobo']</p>
-            <p class="indent1">//finish l8r</p>
-            <p>};</p>
+          <h1>Why Code?</h1>
+          <h2><span>Dev life is for me</span></h2>
+          <div class="code-item">
+            <ul><h3><span>Tech</span>nical Chops</h3>
+              <li class="code-vt"><div class="bold">Trained Engineer</div>
+                <div>
+                  <div><span>logic</span></div>
+                  <div><span>process-oriented</span></div>
+                </div>
+              </li>
+              <li class="img-background"><img src="assets/stock-market.png"><div class="bold">Active Daytrader</div>
+                <div>
+                  <div><span>discipline</span></div>
+                  <div><span>metric-driven</span></div>
+                </div>
+              </li>
+            </ul>
           </div>
-          <canvas id="code-score-chart" width="400px" height="400px"></canvas>
+          <div class="code-item">
+            <ul><h3><span>Opportunity</h3>
+              <li class="code-cf"><div class="bold">Code Fellows Program</div>
+                <div>
+                  <div><span><i class="em em---1"></i>culture<i class="em em-clap"></i></span></div>
+                  <div><span><i class="em em-arrow_up"></i>curriculum</span></div>
+                </div>
+              </li>
+              <li class="code-me">
+                <div class="bold"><i class="em em-100"></i>Me<i class="em em-100"></i></div>
+                <div>
+                  <div><span>work hard</span></div>
+                  <div><span>play hard</span></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- <ul>
+            <h3>var swag = function(style) {</h3>
+            <li>Function First</li>
+            <li>Eye for the Aesthetic</li>
+            <h3>};</h3>
+          </ul>
+          <ul><h3>Opportunity</h3>
+            <li>Code Fellows Program</li>
+            <li>100% and willingness to learn</li>
+          </ul> -->
         </div>
       </section>
       <section id="section-portfolio" class="site-section">
@@ -90,6 +134,12 @@
         <div id="projects" class="projects-container"></div>
       </div>
     </section>
+    <section class="site-section">
+      <div class="section-container">
+        <h1>Work 2</h2>
+        <canvas id="code-score-chart" width="400px" height="400px"></canvas>
+      </div>
+    </section>
     <section id="section-contact" class="site-section">
     <div class="section-container">
       <h1>Contact</h1>
@@ -99,7 +149,7 @@
     </div>
   </section>
     </main>
-    <script src="vendor/scripts/handlebars-v4.0.5.js"></script>
+    <script src="vendor/lib/handlebars/handlebars-v4.0.5.js"></script>
     <script src="scripts/project.js"></script>
     <script src="scripts/app.js"></script>
   </body>
