@@ -2,9 +2,9 @@
 
 (function(module) {
 
-  const app = {};
+  const appView = {};
 
-  app.createProjectTemplateObject = project => {
+  appView.createProjectTemplateObject = project => {
     let projectTemplateObject = {};
     for (let key in project) {
       if ( key ==='tags' ) {
@@ -24,7 +24,7 @@
     return projectTemplateObject;
   }
 
-  app.createProjectSections = () => {
+  appView.createProjectSections = () => {
     Project.projectsProcessed
       .reduce( (array, project) => {
         if ( array.indexOf(project.projectSection) === -1 ) { array.push(project.projectSection) } return array;
@@ -39,25 +39,25 @@
               .map( project => `<div>${project.projectName}</div>`)
               .reduce( ( a, b ) => a.concat(b) , '')
           };
-        app.renderTemplate(projectListBySection, '#project-by-section-template', '#project-by-section');
+        appView.renderTemplate(projectListBySection, '#project-by-section-template', '#project-by-section');
       });
   }
 
-  app.handleNavToggle = () => {
+  appView.handleNavToggle = () => {
     $('#menu-div').on('click', function() {
       $('nav ul').fadeToggle(500);
       $(this).toggleClass('is-nav-open is-nav-closed');
     });
   }
 
-  app.handleNavClick = () => {
+  appView.handleNavClick = () => {
     $('nav li').on('click', function() {
       $('nav ul').fadeOut(500);
       $('#menu-div').toggleClass('is-nav-open is-nav-closed');
     })
   }
 
-  app.handleProjectClick = () => {
+  appView.handleProjectClick = () => {
     $('#project-by-section').on('click', 'section div', function() {
       // $('.project').fadeOut(300);
       // $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
@@ -67,18 +67,17 @@
       $('#project-by-section div').removeClass('is-project-selected');
       $(this).toggleClass('is-project-selected');
 
-      app.projectSlider.goToSlide($('#project-by-section section div').index(this));
+      appView.projectSlider.goToSlide($('#project-by-section section div').index(this));
     });
   }
 
-  app.renderTemplate = (item, template, domTarget) => {
+  appView.renderTemplate = (item, template, domTarget) => {
     let source = $(template).html();
     let templateRender = Handlebars.compile(source);
-    let newItem = templateRender(item);
-    $(domTarget).append(newItem);
+    $(domTarget).append(templateRender(item));
   }
 
-  app.renderCodeChart = () => {
+  appView.renderCodeChart = () => {
     let codeScoreArray = Project.projectsProcessed.map( project => project.codeScore);
     let scoreLabelNames = Project.projectsProcessed.map( project => `${project.projectSection}: ${project.titleDescription.slice(0, project.titleDescription.search('Project'))}`);
 
@@ -129,36 +128,32 @@
     });
   }
 
-  app.runProjectSlider = () => {
+  appView.runProjectSlider = () => {
     return $('#projects').bxSlider( {
       onSlideBefore: (slideElement, oldIndex, newIndex) => {
         $('#project-by-section div').removeClass('is-project-selected');
-        $($('#project-by-section section div')[app.projectSlider.getCurrentSlide()]).toggleClass('is-project-selected');
+        $($('#project-by-section section div')[appView.projectSlider.getCurrentSlide()]).toggleClass('is-project-selected');
       },
       onSliderLoad: currentIndex => {
         $('#project-by-section div').removeClass('is-project-selected');
-        $($('#project-by-section section div')[app.projectSlider.getCurrentSlide()]).toggleClass('is-project-selected');
+        $($('#project-by-section section div')[appView.projectSlider.getCurrentSlide()]).toggleClass('is-project-selected');
       }
     });
   }
 
-  app.loadPage = () => {
-    Project.projectsProcessed.forEach( project => app.renderTemplate(app.createProjectTemplateObject(project), '#project-template', '#projects')); // eslint-disable-line no-use-before-define
-    app.createProjectSections();
-    app.renderCodeChart();
-    app.handleNavToggle();
-    app.handleNavClick();
-    app.handleProjectClick();
-    app.projectSlider = app.runProjectSlider();
+  appView.loadPage = () => {
+    Project.projectsProcessed.forEach( project => appView.renderTemplate(appView.createProjectTemplateObject(project), '#project-template', '#projects')); // eslint-disable-line no-use-before-define
+    appView.createProjectSections();
+    appView.renderCodeChart();
+    appView.handleNavToggle();
+    appView.handleNavClick();
+    appView.handleProjectClick();
+    appView.projectSlider = appView.runProjectSlider();
   }
 
-  module.app = app;
+  module.appView = appView;
 
   $(document).ready( () => {
-    // $('body *').css('visibility', 'hidden');
     Project.fetchAll();
-    // window.onload = () => {
-    //   $('body *').css('visibility', 'initial');
-    // }
   });
 })(window);
