@@ -17,6 +17,7 @@
     <script src="vendor/lib/jQuery/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
     <script src="vendor/lib/bxSlider/jquery.bxslider.min.js"></script>
+    <!-- <script src="vendor/scripts.page.js"</script> -->
 
     <!-- handlebar project template -->
     <script id="project-template" type="text/x-handlebars-template">
@@ -30,7 +31,7 @@
         <div class="project-description">
           <div><p class="description-title bold">html</p>{{{tagHTML}}}</div>
           <div><p class="description-title bold">css</p>{{{tagCSS}}}</div>
-          <div><p class="description-title bold">js</p>{{{tagJS}}}</div>
+          <div><p class="description-title bold">javascript</p>{{{tagJS}}}</div>
         </div>
       </article>
     </script>
@@ -87,7 +88,7 @@
                   <div><span>process-oriented</span></div>
                 </div>
               </li>
-              <li class="img-background"><img src="assets/stock-market.png"><div class="bold">Active Daytrader</div>
+              <li class="img-background-container"><img src="assets/stock-market.png"><div class="bold">Active Daytrader</div>
                 <div>
                   <div><span>discipline</span></div>
                   <div><span>metric-driven</span></div>
@@ -112,16 +113,7 @@
               </li>
             </ul>
           </div>
-          <!-- <ul>
-            <h3>var swag = function(style) {</h3>
-            <li>Function First</li>
-            <li>Eye for the Aesthetic</li>
-            <h3>};</h3>
-          </ul>
-          <ul><h3>Opportunity</h3>
-            <li>Code Fellows Program</li>
-            <li>100% and willingness to learn</li>
-          </ul> -->
+
         </div>
       </section>
       <section id="section-portfolio" class="site-section">
@@ -147,10 +139,11 @@
       <a href="https://github.com/remilonwheels" class="contact-link"><div><i class="fa fa-github-square fa-5x" aria-hidden="true"></i><span class="text-right">Github</span></div></a>
       <a href="https://www.linkedin.com/in/remil-marzan-3827a437" class="contact-link"><div><i class="fa fa-linkedin-square fa-5x" aria-hidden="true"></i><span class="text-right">Linkedin</span></div></a>
     </div>
-  </section>
+    </section>
     </main>
     <script src="vendor/lib/handlebars/handlebars-v4.0.5.js"></script>
     <script src="scripts/project.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/routes.js"></scr
   </body>
 </html>
