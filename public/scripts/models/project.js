@@ -16,7 +16,7 @@
   Project.fetchAll = () => {
     let load = () => {
       Project.loadAll(JSON.parse(localStorage.projectData));
-      app.loadPage();
+      appView.loadPage();
     }
     let updateData = (data, msg, xhr) => {
       localStorage.projectData = JSON.stringify(data);
