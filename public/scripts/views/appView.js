@@ -36,37 +36,53 @@
             projectList:
               Project.projectsProcessed
               .filter( project => project.projectSection === section )
-              .map( project => `<div>${project.projectName}</div>`)
+              .map( project => `<div>${project.titleDescription}</div>`)
               .reduce( ( a, b ) => a.concat(b) , '')
           };
         appView.renderTemplate(projectListBySection, '#project-by-section-template', '#project-by-section');
       });
   }
 
-  appView.handleNavToggle = () => {
-    $('#menu-div').on('click', function() {
-      $('nav ul').fadeToggle(500);
-      $(this).toggleClass('is-nav-open is-nav-closed');
+  appView.populateGithubData = () => {
+    let repos = [];
+    $.ajax({
+      url: 'https://api.github.com/user/repos?type=owner',
+      method: 'GET',
+      headers: {
+        Authorization: `token ${githubToken}`
+      }
+    })
+    .then( data => {
+      repos = data;
+      console.log('in ajax');
+      console.log(data);
+      console.log(repos);
+      console.log(repos.length);
+      $('#repo-total').text(repos.length);
     });
+
+    console.log(repos);
+
   }
 
-  appView.handleNavClick = () => {
+  appView.handleNavToggle = () => {
+    let animationTime = 250;
+
+    $('#menu-div').on('click', function() {
+      $('nav ul').fadeToggle(animationTime);
+      $(this).toggleClass('is-nav-open is-nav-closed');
+    });
+
     $('nav li').on('click', function() {
-      $('nav ul').fadeOut(500);
+      $('nav ul').fadeOut(animationTime);
       $('#menu-div').toggleClass('is-nav-open is-nav-closed');
     })
   }
 
   appView.handleProjectClick = () => {
     $('#project-by-section').on('click', 'section div', function() {
-      // $('.project').fadeOut(300);
-      // $(`article[data-project="${$(this).text()}"], article[data-section="${$(this).text()}"]`)
-      //     .delay(300)
-      //     .fadeIn(300);
-
       $('#project-by-section div').removeClass('is-project-selected');
       $(this).toggleClass('is-project-selected');
-
       appView.projectSlider.goToSlide($('#project-by-section section div').index(this));
     });
   }
@@ -79,7 +95,7 @@
 
   appView.renderCodeChart = () => {
     let codeScoreArray = Project.projectsProcessed.map( project => project.codeScore);
-    let scoreLabelNames = Project.projectsProcessed.map( project => `${project.projectSection}: ${project.titleDescription.slice(0, project.titleDescription.search('Project'))}`);
+    let scoreLabelNames = Project.projectsProcessed.map( project => `${project.projectSection}: ${project.titleDescription}`);
 
     Chart.defaults.global.defaultFontColor = 'rgba(255, 255, 255, 1)';
 
@@ -146,8 +162,8 @@
     appView.createProjectSections();
     appView.renderCodeChart();
     appView.handleNavToggle();
-    appView.handleNavClick();
     appView.handleProjectClick();
+    appView.populateGithubData();
     appView.projectSlider = appView.runProjectSlider();
   }
 

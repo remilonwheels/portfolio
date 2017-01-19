@@ -22,7 +22,7 @@
     <!-- handlebar project template -->
     <script id="project-template" type="text/x-handlebars-template">
       <article class="project" data-project="{{projectName}}" data-section="{{projectSection}}">
-        <h3 class="center-text">{{projectName}} [{{projectSection}}]:{{titleDescription}}</h3>
+        <h3 class="center-text">{{projectName}}</h3>
         <div class="horizontal-center">
           <img src="{{projectIMG}}">
         </div>
@@ -118,7 +118,7 @@
       </section>
       <section id="section-portfolio" class="site-section">
       <div class="section-container">
-        <h1>Work</h1>
+        <h1>Portfolio</h1>
         <div id="project-by-section" class="project-by-section">
         <h2 class="center-text bold">Select Project</h2>
         </div>
@@ -129,6 +129,9 @@
     <section class="site-section">
       <div class="section-container">
         <h1>Work 2</h2>
+        <section>
+          <dt>Total Repos:</dt><dd id='repo-total'></dd>
+        </section>
         <canvas id="code-score-chart" width="400px" height="400px"></canvas>
       </div>
     </section>
@@ -143,6 +146,7 @@
     </main>
     <script src="vendor/scripts/page.js"></script>
     <script src="vendor/lib/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="scripts/models/tokens.js"></script>
     <script src="scripts/models/project.js"></script>
     <script src="scripts/views/appView.js"></script>
     <script src="scripts/controllers/routes.js"></script>

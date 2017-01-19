@@ -3,9 +3,7 @@
 (function(module) {
 
   function Project(opts) {
-    for (let key in opts) {
-      this[key] = opts[key];
-    }
+    Object.keys(opts).forEach( key => this[key] = opts[key]);
   }
 
   Project.projectsProcessed = [];
