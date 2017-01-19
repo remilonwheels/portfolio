@@ -43,6 +43,28 @@
       });
   }
 
+  appView.populateGithubData = () => {
+    let repos = [];
+    $.ajax({
+      url: 'https://api.github.com/user/repos?type=owner',
+      method: 'GET',
+      headers: {
+        Authorization: `token ${githubToken}`
+      }
+    })
+    .then( data => {
+      repos = data;
+      console.log('in ajax');
+      console.log(data);
+      console.log(repos);
+      console.log(repos.length);
+      $('#repo-total').text(repos.length);
+    });
+
+    console.log(repos);
+
+  }
+
   appView.handleNavToggle = () => {
     $('#menu-div').on('click', function() {
       $('nav ul').fadeToggle(500);
@@ -148,6 +170,7 @@
     appView.handleNavToggle();
     appView.handleNavClick();
     appView.handleProjectClick();
+    appView.populateGithubData();
     appView.projectSlider = appView.runProjectSlider();
   }
 

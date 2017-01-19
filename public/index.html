@@ -129,6 +129,9 @@
     <section class="site-section">
       <div class="section-container">
         <h1>Work 2</h2>
+        <section id="repo-info">
+          <dt>Total Repos:</dt><dd id='repo-total'></dd>
+        </section>
         <canvas id="code-score-chart" width="400px" height="400px"></canvas>
       </div>
     </section>
@@ -143,6 +146,7 @@
     </main>
     <script src="vendor/scripts/page.js"></script>
     <script src="vendor/lib/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="scripts/models/tokens.js"></script>
     <script src="scripts/models/project.js"></script>
     <script src="scripts/views/appView.js"></script>
     <script src="scripts/controllers/routes.js"></script>
