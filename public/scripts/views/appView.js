@@ -45,24 +45,13 @@
 
   appView.populateGithubData = () => {
     let repos = [];
-    $.ajax({
-      url: 'https://api.github.com/user/repos?type=owner',
-      method: 'GET',
-      headers: {
-        Authorization: `token ${githubToken}`
-      }
-    })
+
+    $.get('/github/user/repos?type=owner')
     .then( data => {
+      console.log('in github ajax call');
       repos = data;
-      console.log('in ajax');
-      console.log(data);
-      console.log(repos);
-      console.log(repos.length);
       $('#repo-total').text(repos.length);
     });
-
-    console.log(repos);
-
   }
 
   appView.handleNavToggle = () => {
