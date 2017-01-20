@@ -48,7 +48,6 @@
 
     $.get('/github/user/repos?type=owner')
     .then( data => {
-      console.log('in github ajax call');
       repos = data;
       $('#repo-total').text(repos.length);
     });
